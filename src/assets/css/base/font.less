@@ -1,0 +1,109 @@
+/* ---=========== Шрифты испльзуемые в проекте ======------- */
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-regular.woff2'),
+    /* modern */
+      url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-regular.ttf'),
+    url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-regular.svg');
+}
+
+@font-face {
+  font-family: 'OpenSans-b';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-700.woff2'),
+    url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-700.ttf'),
+    url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-700.svg');
+}
+
+@font-face {
+  font-family: 'OpenSans-extra';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-800.woff2'),
+    url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-800.ttf'),
+    url('../../fonts/open-sans-v15-latin_cyrillic/open-sans-v15-latin_cyrillic-800.svg');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../../fonts/pacifico-v12-latin_cyrillic/pacifico-v12-latin_cyrillic-regular.woff2'),
+    url('../../fonts/pacifico-v12-latin_cyrillic/pacifico-v12-latin_cyrillic-regular.ttf'),
+    url('../../fonts/pacifico-v12-latin_cyrillic/pacifico-v12-latin_cyrillic-regular.svg');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../../fonts/PlayfairDisplay-Regular.ttf');
+}
+
+/* --------------------------------------------------------- */
+
+/* ---=============== Размеры и самые обющие модификаторы для шрифтов ===========------- */
+
+body {
+  font: 16px 'OpenSans', sans-serif;
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
+}
+
+header {
+  font: 18px 'OpenSans-b', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PlayfairDisplay';
+  color: var(--header-color);
+  text-align: left;
+}
+
+/* --------------------------------------------------------- */
+
+.header-large {
+  font-size: 48px;
+  letter-spacing: 0.075em;
+  @media (max-width: 800px) {
+    font-size: 30px;
+  }
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.header-sub {
+  font-size: 34px;
+  letter-spacing: 0.075em;
+  @media (max-width: 800px) {
+    font-size: 26px;
+  }
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+}
+
+.font-extra,
+.text--extra {
+  font-family: 'OpenSans-extra';
+}
+
+b {
+  font-family: 'OpenSans-b';
+}

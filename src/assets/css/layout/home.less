@@ -1,0 +1,99 @@
+.home {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-column-gap: 15px;
+  width: 100%;
+
+  @media screen {
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 30px;
+      grid-column-gap: 0;
+    }
+  }
+
+  &--text {
+    &--button--wrapper {
+      display: flex;
+      grid-area: left-2;
+      align-items: center;
+    }
+
+    &--button {
+      font: calc(10px + 0.3vmin) 'OpenSans-b', sans-serif;
+      margin: 0 5px;
+
+      @media screen {
+        @media (max-width: 600px) {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    &--counters {
+      width: 100%;
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: minmax(200px, 1fr) minmax(100px, 1/2fr);
+      grid-template-rows: 250px 100px;
+      max-width: 100%;
+      grid-template-areas: "left-1 right""left-2 .";
+      padding: 0 15px;
+
+      @media screen {
+        @media (max-width: 600px) {
+          grid-template-rows: 150px 100px;
+          grid-column-gap: 20px;
+          grid-template-areas: "left-1 right""left-2 left-2";
+        }
+      }
+
+      &--header {
+        font-size: calc(0px + 5vmin);
+        margin-top: 0;
+        line-height: calc(0px + 7vmin);
+        grid-area: left-1;
+        align-items: center;
+        height: 100%;
+        display: flex;
+      }
+
+      &--number {
+        grid-area: right;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%
+      }
+    }
+  }
+
+  &--map {
+    &--wrapper {
+      z-index: 5;
+      height: calc(100vh - var(--nav--header-height));
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      right: 0;
+      padding-right: 15px;
+      top: var(--nav--header-height);
+
+      @media screen {
+        @media (max-width: 980px) {
+          height: 400px;
+        }
+      }
+
+      &--img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

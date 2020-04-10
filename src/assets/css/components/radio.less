@@ -1,0 +1,59 @@
+.input--radio {
+  &--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 1em 0;
+    &__line {
+      display: grid;
+      grid-template-columns: 150px repeat(4, 1fr);
+      grid-column-gap: 10px;
+      min-height: 40px;
+      border-bottom: 1px dashed var(--grey);
+      align-items: center;
+      &--icons--text {
+          height: auto;
+      }
+    }
+
+    .has-tooltip {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &--header {
+    text-align: left;
+    font-size: 1rem;
+    color: var(--grey);
+    font-family: 'OpenSans-b';
+    align-self: center;
+    margin: 15px 10px 10px 0;
+    letter-spacing: -1px;
+  }
+
+  &--icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    min-height: 40px;
+    width: 100%;
+    &--text {
+      height: 60px;
+      flex-wrap: wrap;
+      cursor: pointer;
+      &--label {
+        width: 100%;
+        font-size: 0.8em;
+        text-align: center;
+      }
+    }
+    .fa-icon {
+      @media screen {
+        @media (max-width: 600px) {
+          font-size: 2em !important;
+        }
+      }
+    }
+  }
+}

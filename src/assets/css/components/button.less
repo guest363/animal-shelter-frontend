@@ -1,0 +1,39 @@
+.common--button {
+  height: calc(55px + 1.5vmin);
+  background: var(--button--default--bg);
+  color: var(--button--text--default);
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font: calc(10px + 0.8vmin) "OpenSans-b", sans-serif;
+  width: 228px;
+  letter-spacing: 1.8px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  padding: 15px 5px;
+  transition: background-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  &__disable, &:disabled{
+    cursor: not-allowed;
+    color: #bebdbd !important;
+    border: 2px solid #bebdbd !important;
+    background-color: #ffffff !important;
+  }
+  &:hover{
+    background-color: var(--button--hover--bg);
+    color: var(--button--text--hover);
+    border: var(--button--border);
+  }
+  &:active{
+    background-color: var(--button--active--bg);
+    color: var(--button--text--active);
+    border: none;
+  }
+}
+
+.block--info--button{
+  background: var(--button--default--bg);
+  color: var(--white);
+  border-color: var(--white);
+}

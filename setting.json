@@ -1,0 +1,7 @@
+{
+  "files.autoSave": "afterDelay",
+  "prettier.arrowParens": "always",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "editor.formatOnSave": true
+}

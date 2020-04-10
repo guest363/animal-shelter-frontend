@@ -1,0 +1,113 @@
+/* !!! LEGACY !!! */
+
+
+/* ------========== Двух колоночный раздел советы =========----------
+ */
+
+ .grid-advise {
+    display: grid;
+    grid-template-columns: 391px 1fr;
+    grid-column-gap: 0;
+  }
+  
+  @media (max-width: 1150px) {
+    .grid-advise {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  /*------------------------------------------------------*/
+  
+  /* ------========== Элементы каталога =========----------
+  Занимает 100% отведенного места.
+  Каждый элемент не более 263px в ширину.
+   */
+  
+  .grid--catalog-4-2 {
+    display: grid;
+    grid-column-gap: 28px;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 263px);
+    width: 100%;
+  }
+  
+  @media (max-width: 1199px) {
+  
+    /* CSS для ширины от 992px до 1199px */
+    .grid--catalog-4-2 {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 991px) {
+  
+    /* CSS для ширины от 768px до 991px */
+    .grid--catalog-4-2 {
+      margin: 40px 0 0 0;
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+  
+    /* CSS для ширины до 575px (включительно) */
+    .grid--catalog-4-2 {
+      grid-template-columns: repeat(auto-fill, 45%);
+      justify-items: center;
+    }
+  }
+  
+  /*------------------------------------------------------*/
+  
+  /* ------========== Двух колоночный магазин =========----------
+  Занимает 100% отведенного места.
+  Слева меню на 250px, справа весь контент.
+  В мобильной версии меню находится с верху.
+   */
+  
+  .grid-shop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 255px auto;
+    grid-column-gap: 39px;
+  }
+  
+  /* md-размер (<=991px) */
+  @media (max-width: 991px) {
+  
+    /* CSS для ширины от 768px до 991px */
+    .grid-shop {
+      grid-template-columns: 1fr;
+    }
+  
+  }
+  
+  /*------------------------------------------------------*/
+  
+  
+  /* ------========== Двух колоночный раздел товаров магазина =========----------
+  Занимает 100% отведенного места.
+  Соотношение на десктопе 3 к 2. 3 - картинка, 2 - описание
+  В мобильной версии картинка находится с верху.
+   */
+  
+  .grid-shop--item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 34px;
+  }
+  
+  /* md-размер (<=991px) */
+  @media (max-width: 991px) {
+  
+    /* CSS для ширины от 768px до 991px */
+    .grid-shop--item {
+      display: inline-block;
+    }
+  
+  }
+  
+  /*------------------------------------------------------*/

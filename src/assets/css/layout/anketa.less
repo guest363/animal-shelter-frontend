@@ -1,0 +1,25 @@
+.anketa {
+    &--ways {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-column-gap: 15px;
+        .input--radio--wrapper {
+            grid-template-columns: auto repeat(4, 1fr);
+        }
+
+        &--route {
+            position: relative;
+            padding: 0 10px;
+            &--disabled {
+                cursor: not-allowed;
+                z-index: 50;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: var(--opacity--fill--white);
+                margin: 0 -10px;
+            }
+        }
+    }
+}

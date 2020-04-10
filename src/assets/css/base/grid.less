@@ -1,0 +1,130 @@
+/* ------===== Прижать футтер и сделать шаблон =====------- 
+<header>
+<main>
+<footer>
+*/
+
+html {
+  height: 100%;
+}
+
+#app,
+#__layout,
+.wrapper--layouts {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.wrapper--layouts {
+  position: absolute;
+  top: 0;
+  margin-top: 0 !important;
+}
+
+#header {
+  padding-top: 28px;
+  padding-bottom: 10px;
+  display: flex;
+  height: var(--nav--header-height);
+}
+
+body {
+  min-height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+
+#main {
+  flex: 1 1 auto;
+}
+
+/*------------------------------------------------------*/
+
+/* ------===== Ограничитель максимальной ширины контента =====------- */
+
+.content-wrapper {
+  width: 100%;
+  max-width: var(--max-content-size);
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*------------------------------------------------------*/
+
+/* ------===== Флекс где все выравнивается по центру =====------- 
+Можно использовать для кнопок, различных контейнеров где нужно выровнять
+по ценрту по вертикали игоризонтали*/
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------------------------------------------*/
+
+/* ------===== Общие модификаторы для Grid =====------- */
+
+.gap-small {
+  grid-column-gap: 24px;
+}
+
+.gap-medium {
+  grid-column-gap: 28px;
+}
+
+.gap-larg {
+  grid-column-gap: 32px;
+}
+
+/*------------------------------------------------------*/
+
+/* ------========== Четырех колоночный футтер =========----------
+Занимает 100% отведенного места.
+Минимальный размер ячейки 270px максимум до 100%
+Т.е. этот грид адаптируется под контент
+ */
+
+.grid-footer-4-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-column-gap: 15px;
+  padding: 15px 15px;
+  color: #fff;
+}
+
+/*------------------------------------------------------*/
+
+
+
+
+/* ------========== Главная первый экран =========----------
+ */
+
+ .grid-main-fs {
+  width: 100%;
+  height: calc(100vh - var(--nav--header-height));
+  /* max-height: 460px; */
+  display: grid;
+  grid-template-columns: minmax(270px, 540px) auto 292px;
+  grid-column-gap: 5px;
+  padding: 0 15px 150px 15px;
+  align-content: center;
+}
+
+/* md-размер (<=991px) */
+@media (max-width: 991px) {
+
+  /* CSS для ширины от 768px до 991px */
+  .grid-main-fs {
+    grid-template-columns: 1fr;
+    padding: 0 0 60px 0;
+  }
+
+}
+
+/*------------------------------------------------------*/
